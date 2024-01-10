@@ -1,6 +1,5 @@
 // App.js
 
-import logo from './logo.svg';
 import './App.css';
 import React, { useEffect, useState } from "react";
 
@@ -23,8 +22,6 @@ function App() {
   const [bestOfGameO, setBestOfGameO] =useState([]);
   const [winningCells, setWinningCells] = useState([]);
   const [timer, setTimer] = useState(3);
-  console.log("winner: ", winner)
-  console.log("next Turn: ", nextTurn)
   const [gamesPlayed, setGamesPlayed] = useState(0);
 
   const checkWinner = () =>{
@@ -370,7 +367,7 @@ function App() {
     if(winner==="O wins"){
       setPlayerTwoPoints([...PlayerTwoPoints, "Win"])
     }
-  }, [winner])
+  }, [winner, PlayerOnePoints, PlayerTwoPoints])
 
   useEffect(()=>{
     if(gameToggle==="bestOfThree"){
@@ -395,7 +392,7 @@ function App() {
         setGameMessage('Final Match Starts in')
       }
     }
-  })
+  },[setGameMessage, gameToggle, gamesPlayed])
 
   useEffect(()=>{
     if(gameToggle==="bestOfThree"){
@@ -499,7 +496,7 @@ function App() {
         setGameMessage('');
       }
     }
-  }, [bestOfGameX, bestOfGameO, gamesPlayed])
+  }, [bestOfGameX, bestOfGameO, gamesPlayed, gameToggle])
 
 
   const handleClick = (r, c) => {
@@ -535,7 +532,7 @@ function App() {
         <div>{winner}</div>
         <div style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
           <div>{gameMessage}</div>
-          <div>{gameToggle!="unlimited" && gamesPlayed!=0 && timer > 0 ? timer: ''}</div>
+          <div>{gameToggle!=="unlimited" && gamesPlayed!==0 && timer > 0 ? timer: ''}</div>
         </div>
       </div>
     </div>}
