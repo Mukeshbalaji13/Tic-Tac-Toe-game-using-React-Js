@@ -537,7 +537,7 @@ function App() {
       </div>
     </div>}
       <div className="app">
-        <div className="header alignCenter">tic tac toe</div>
+        <div className="header alignCenter">tic tac toe game</div>
         <div className="alignCenter board">
           <div style={{width:"27vw", display:"flex", justifyContent:"space-between", fontWeight:"lighter",height:"7%"}}>
             <div className='palyer'>
