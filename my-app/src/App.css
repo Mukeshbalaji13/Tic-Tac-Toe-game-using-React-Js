@@ -11,7 +11,6 @@
     font-size: 2rem;
     font-weight: 900;
     height: 8vh;
-    /* border-bottom: 1px solid white; */
 }
 
 .alignCenter{
@@ -36,7 +35,6 @@
 
 .cell{
    width: 8vw;
-   /* border: 1px solid white; */
    color: #fcc200;
    font-size: 5rem;
    background-color: #003153;
@@ -48,37 +46,16 @@
    padding-bottom: 10px;
    cursor: pointer;
    border-radius: 5px;
-   /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
    box-shadow: -5px -5px 5px rgba(255, 255, 255, 0.2),
                 15px 15px 15px rgba(0,0,0,0.1),
                 inset -5px -5px 5px rgba(255, 255, 255, 0.15),
                 inset 15px 15px 15px rgba(0,0,0,0.1);
 }
 
-/* .yellow{
-    background-color: yellow;
-}
-
-.orange{
-    background-color: orange;
-} */
-
-/* .Reset_button{
-    height: 10vh;
-    width: 30vw;
-    font-size: 2rem;
-    background-color: blueviolet;
-    color: white;
-} */
-
-  .playerIndication {
-    /* position: absolute; */
+.playerIndication {
     height: 2px;
     width: 100%;
-    /* left: 0px; */
-    /* bottom: -10px; */
     background-color: #ffd700;
-    /* animation: underlineAnimation 1s alternate; */
   }
   
   @keyframes underlineAnimationLeftToRight {
