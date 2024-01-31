@@ -367,7 +367,7 @@ function App() {
     if(winner==="O wins"){
       setPlayerTwoPoints([...PlayerTwoPoints, "Win"])
     }
-  }, [winner, PlayerOnePoints, PlayerTwoPoints])
+  }, [winner])
 
   useEffect(()=>{
     if(gameToggle==="bestOfThree"){
