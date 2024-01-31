@@ -359,15 +359,16 @@ function App() {
     }
   }
 
-  useEffect(()=>{
-    if(winner==="X wins"){
-      setPlayerOnePoints([...PlayerOnePoints,"Win"])
+  useEffect(() => {
+    if (winner === "X wins") {
+      setPlayerOnePoints((prevPoints) => [...prevPoints, "Win"]);
     }
-
-    if(winner==="O wins"){
-      setPlayerTwoPoints([...PlayerTwoPoints, "Win"])
+  
+    if (winner === "O wins") {
+      setPlayerTwoPoints((prevPoints) => [...prevPoints, "Win"]);
     }
-  }, [winner])
+  }, [winner, setPlayerOnePoints, setPlayerTwoPoints]);
+  
 
   useEffect(()=>{
     if(gameToggle==="bestOfThree"){
